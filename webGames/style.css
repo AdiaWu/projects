@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-family: "Verdana", sans-serif;
+    font-size: 30px; /* Adjust the font size as desired */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+body{
+    background-color: #d8e6e9;
+    line-height: 1.6;
+}
+.game{
+    width: 600px;
+    height: 200px;
+    border: 1px solid #000000;
+    margin: auto;
+    background-image: url('cloud.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#dino{
+    width: 70px;
+    height: 70px;
+    background-image: url(dino2.png);
+    background-size: auto 70px;
+
+    position: relative;
+    top: 143px;
+}
+
+.jump{
+    animation: jump 0.4s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 143px;
+    }
+
+    30% {
+        top: 100px; /* changed from 115px */
+    }
+
+    50% {
+        top: 50px; /* changed from 70px */
+    }
+
+    58% {
+        top: 120px; /* changed from 115px */
+    }
+
+    100% {
+        top: 143px;
+    }
+}
+
+#level {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#cactus {
+    width: 30px; /* doubled from 20px */
+    height: 60px; /* doubled from 40px */
+    position: relative;
+    top: 73px; /* adjusted from 91px to position the cactus correctly */
+    left: 580px;
+
+    background-image: url(cactus2.png);
+    background-size: 30px 60px; /* doubled from 20px 40px */
+    animation: cactus-block 1.5s infinite linear;
+    animation-duration: var(--cactus-animation-duration, 1.5s);
+}
+
+
+@keyframes cactus-block{
+    0%{
+        left: 600px;
+    }
+
+    100%{
+        left: -20px;
+    }
+}
